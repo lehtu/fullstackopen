@@ -9,16 +9,20 @@ class App extends React.Component {
     }
   }
 
+  asetaArvoon = (arvo) => () => this.setState({ counter: arvo })
+
   render() {
     return (
       <div>
         <div>{this.state.counter}</div>
-        <button onClick={() => this.setState({ counter: this.state.counter + 1 })}>
-          plus
-        </button>
-        <button onClick={() => this.setState({ counter: 0 })}>
-          zero
-        </button>
+        <div>
+          <button onClick={this.asetaArvoon(this.state.counter+1)}>
+            Plus
+          </button>
+          <button onClick={this.asetaArvoon(0)}>
+            Zero
+          </button>
+        </div>
       </div>
     )
   }
