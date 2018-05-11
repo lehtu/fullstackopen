@@ -4,7 +4,7 @@ The task: [0.5](https://fullstackopen.github.io/teht%C3%A4v%C3%A4t/#05-single-pa
 
 ## Link to source
 
-Open in [WebSequenceDiagram editor](https://www.websequencediagrams.com/?lz=dXNlci0-YnJvd3NlcjoKbm90ZSBsZWZ0IG9mIAAPBwogIHVzZXIgd3JpdGVzIGZ1bGxzdGFjay1leGFtcGxlYXBwLmhlcm9rdWFwcC5jb20vc3BhIGluIHRoZQA7CWVuZCBub3RlCgoAZQctPnNlcnZlcjogR0VUAC4nAIERDgA6BgogAAIHIGNyZWF0ZXMgSFRNTCByZXNwb25zZQBvCgBpBgCBYgogc3RhdHVzIDIwMCwALwUtY29kZSBmb3IAgTQFcGFnAHI7bWFpbi5jc3MAWB5yZXR1cm5zIAAlCQCBYTwuagBHJwAlBwCDVRYAhAMHIHJ1bnMgamF2YXNjcmlwdCAAghYGcm9tADcIAINICQCEHRZhbGwAg3sFcmVxdWVzdHMgYXJlIGRvbmUgYmFzZWQgbwCEGQYAgycFZmlsZSwKIG5vdwB1CmVuZGVycwAaCmNvZACDQQsAhAw5ZGF0YS5qc29uAIQ0FwCDfgVpbgCCHQcAgTQKZGF0YQCBeAcAhHAGAIQxJgCDWQgAYBcAhlgJAGgHYWRkcyBlbGVtZW50cyBpbiBET00AgiIOAIE2CgCGSQg&s=roundgreen)
+Open in [WebSequenceDiagram editor](https://www.websequencediagrams.com/?lz=dXNlci0-YnJvd3NlcjoKbm90ZSBsZWZ0IG9mIAAPBwogIHVzZXIgd3JpdGVzIGZ1bGxzdGFjay1leGFtcGxlYXBwLmhlcm9rdWFwcC5jb20vc3BhIGluIHRoZQA7CWVuZCBub3RlCgoAZQctPnNlcnZlcjogR0VUAC4nAIERDgA6BgogAAIHIGNyZWF0ZXMgSFRNTCByZXNwb25zZQBvCgBpBgCBYgogc3RhdHVzIDIwMCwALwUtY29kZSBmb3IAgTQFcGFnAHI7bWFpbi5jc3MAWB5yZXR1cm5zIAAlCQCBYTwuagBHJwAlBwCDVRZhbGwAgzMFcmVxdWVzdHMgYXJlIGRvbmUgYmFzZWQgbwCDUQYAgl8FZmlsZSwKIG5vdwCEIwggcmVuZGVycwAaCmNvZACCeQsAhEkWADQJdW5zIGphdmFzY3JpcHQANwUgZnJvbQCBKwgAhANCZGF0YS5qc29uAIQ0FwCDfgVpbgCCHQcAgXwKZGF0YQCBBAcAhHAGAIQxJgCDWQgAYBcAhlgJAGgHYWRkcyBlbGVtZW50cyBpbiBET00AgmoOAIE2CgCGSQg&s=roundgreen)
 
 ## Code
 ```
@@ -25,11 +25,11 @@ server->browser: status 200, returns main.css
 browser->server: GET fullstack-exampleapp.herokuapp.com/spa.js
 server->browser: status 200, returns spa.js
 note left of browser
- browser runs javascript code from spa.js
-end note
-note left of browser
  all the requests are done based on the HTML file,
  now browser renders the HTML code
+end note
+note left of browser
+ browser runs javascript code from spa.js
 end note
 
 browser->server: GET fullstack-exampleapp.herokuapp.com/data.json
