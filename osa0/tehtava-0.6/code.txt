@@ -1,0 +1,15 @@
+user->browser:
+note left of browser
+  user writes new note in the input and clicks submit button
+  and new note gets added to the DOM right away
+end note
+
+browser->server: POST fullstack-exampleapp.herokuapp.com/new_note_spa
+note right of browser
+  spa.js prevents default behavior of form submit
+  and sends form data as xhr request to server
+end note
+server->browser: status 201, HTML-code for the page
+note left of server
+  server just tells that new note created succesfully
+end note
