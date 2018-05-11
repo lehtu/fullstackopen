@@ -1,0 +1,37 @@
+user->browser:
+note left of browser
+  user writes new note in the input and clicks submit button
+end note
+
+browser->server: POST fullstack-exampleapp.herokuapp.com/notes
+note left of server
+  server gets form data, saves it in the array and redirects user
+  back to the /notes page
+end note
+server->browser: status 200, HTML-code for the page
+
+browser->server: GET fullstack-exampleapp.herokuapp.com/main.css
+server->browser: status 200, returns main.css
+note left of browser
+ browser re-renders the page with css
+end note
+
+browser->server: GET fullstack-exampleapp.herokuapp.com/main.js
+server->browser: status 200, returns main.js
+note left of browser
+ browser runs javascript code from main.js
+end note
+note left of browser
+ all the requests are done based on the HTML file,
+ now browser renders the HTML code
+end note
+
+browser->server: GET fullstack-exampleapp.herokuapp.com/data.json
+note left of server
+  code in main.js requests data from server
+end note
+server->browser: status 200, returns data.json
+note left of browser
+ main.js adds elements in DOM based on the data.json
+ now there is the new note item as well
+end note
