@@ -1,32 +1,30 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-class Hello extends React.Component {
-  render() {
-    const {name, age} = this.props
-    const bornYear = () => 1900 + new Date().getYear() - age
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      counter: 1
+    }
+  }
 
+  render() {
     return (
       <div>
-        <p>
-          Hello {name}, you are {age} years old <br />
-          So you were propably born {bornYear()}
-        </p>
+        <div>{this.state.counter}</div>
+        <button onClick={() => this.setState({ counter: this.state.counter + 1 })}>
+          plus
+        </button>
+        <button onClick={() => this.setState({ counter: 0 })}>
+          zero
+        </button>
       </div>
     )
   }
 }
 
-const App = () => {
-  const nimi = 'Pekka'
-  const ika = 10
-  return (
-    <div>
-      <h1>Greetings</h1>
-      <Hello name="Arto" age={26 + 10} />
-      <Hello name={nimi} age={ika} />
-    </div>
-  )
-}
-
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)
