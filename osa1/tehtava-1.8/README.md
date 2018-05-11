@@ -2,4 +2,4 @@
 
 The task: (1.8)[https://fullstackopen.github.io/teht%C3%A4v%C3%A4t/#18-unicafe-osa3]
 
-Time spent: 
+Time spent: 33 minutes
