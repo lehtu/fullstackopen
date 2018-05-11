@@ -11,18 +11,15 @@ server->browser: status 200, HTML-code for the page
 
 browser->server: GET fullstack-exampleapp.herokuapp.com/main.css
 server->browser: status 200, returns main.css
-note left of browser
- browser re-renders the page with css 
-end note
 
 browser->server: GET fullstack-exampleapp.herokuapp.com/main.js
 server->browser: status 200, returns main.js
 note left of browser
- browser runs javascript code from main.js
-end note
-note left of browser
  all the requests are done based on the HTML file,
  now browser renders the HTML code
+end note
+note left of browser
+ browser runs javascript code from main.js
 end note
 
 browser->server: GET fullstack-exampleapp.herokuapp.com/data.json
