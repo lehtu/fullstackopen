@@ -1,6 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+const Display = ({ counter }) => <div>{counter}</div>
+
+const Button = ({ handleClick, text }) => (
+  <button onClick={handleClick}>
+    {text}
+  </button>
+)
+
 class App extends React.Component {
   constructor() {
     super()
@@ -14,14 +22,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.state.counter}</div>
+        <Display counter={this.state.counter}/>
         <div>
-          <button onClick={this.asetaArvoon(this.state.counter+1)}>
-            Plus
-          </button>
-          <button onClick={this.asetaArvoon(0)}>
-            Zero
-          </button>
+          <Button
+            handleClick={this.asetaArvoon(this.state.counter + 1)}
+            text="Plus"
+          />
+          <Button
+            handleClick={this.asetaArvoon(this.state.counter - 1)}
+            text="Minus"
+          />
+          <Button
+            handleClick={this.asetaArvoon(0)}
+            text="Zero"
+          />
         </div>
       </div>
     )
